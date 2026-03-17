@@ -11,27 +11,32 @@
     "generate-news": "node scripts/generate-news.js",
     "deploy": "npm run build && node scripts/deploy-to-github.js"
   },
-  "keywords": ["tech-news", "ai", "daily-news", "nextjs"],
+  "keywords": [
+    "tech-news",
+    "ai",
+    "daily-news",
+    "nextjs"
+  ],
   "author": "Xenonesis",
   "license": "MIT",
   "dependencies": {
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.6.3",
+    "gray-matter": "^4.0.3",
     "next": "14.2.35",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "framer-motion": "^12.6.3",
-    "date-fns": "^4.1.0",
-    "gray-matter": "^4.0.3"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/node": "^22.13.14",
-    "@types/react": "^18.3.20",
-    "@types/react-dom": "^18.3.6",
-    "typescript": "^5.8.2",
-    "tailwindcss": "^3.4.17",
-    "postcss": "^8.5.3",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.23.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.35",
-    "ts-node": "^10.9.2"
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
