@@ -1,0 +1,44 @@
+[
+  {
+    "title": "AI Adoption Rate",
+    "description": "Organizations regularly using generative AI",
+    "icon": "📊",
+    "trend": "up",
+    "value": "71%"
+  },
+  {
+    "title": "Market Growth",
+    "description": "Gen AI market CAGR through 2031",
+    "icon": "🚀",
+    "trend": "up",
+    "value": "37.57%"
+  },
+  {
+    "title": "ROI Average",
+    "description": "Return per $1 invested in generative AI",
+    "icon": "💰",
+    "trend": "up",
+    "value": "$3.70"
+  },
+  {
+    "title": "Customer Support AI",
+    "description": "Support interactions involving agentic AI by mid-2026",
+    "icon": "🤖",
+    "trend": "up",
+    "value": "56%"
+  },
+  {
+    "title": "Enterprise Apps with AI",
+    "description": "Applications with task-specific agents by end of 2026",
+    "icon": "📱",
+    "trend": "up",
+    "value": "40%"
+  },
+  {
+    "title": "B2B Spending via AI",
+    "description": "Spending intermediated by AI agents by 2028",
+    "icon": "💼",
+    "trend": "up",
+    "value": "$15T"
+  }
+]
