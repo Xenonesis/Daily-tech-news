@@ -1,11 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --font-space-grotesk: 'Space Grotesk', monospace;
-  --font-inter: 'Inter', sans-serif;
-  --font-jetbrains-mono: 'JetBrains Mono', monospace;
+@theme {
+  --font-display: 'Space Grotesk', monospace;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --color-background: #030014;
+  --color-surface: #0a0a1a;
+  --color-surfaceHighlight: #12122a;
+  --color-surfaceLight: #1a1a3e;
+  --color-primary: #00f0ff;
+  --color-primaryDark: #00c8d4;
+  --color-secondary: #ff00ff;
+  --color-secondaryDark: #d400d4;
+  --color-accent: #ffe600;
+  --color-accentOrange: #ff6b00;
+  --color-text: #ffffff;
+  --color-textMuted: #8892b0;
+  --color-textDim: #5a6478;
+  --color-border: #1e1e3f;
+  --color-borderLight: #2d2d5a;
 }
 
 * {
