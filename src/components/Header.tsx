@@ -28,64 +28,82 @@ export default function Header() {
     <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border"
+          ? "glass-dark backdrop-blur-2xl border-b border-borderLight shadow-lg"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center glow group-hover:glow-hover transition-all duration-300">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <motion.div 
+              whileHover={{ rotate: 180, scale: 1.1 }}
+              transition={{ duration: 0.5 }}
+              className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center glow group-hover:glow-lg transition-all duration-300"
+            >
               <span className="text-background font-bold text-sm">DT</span>
+            </motion.div>
+            <div className="hidden sm:block">
+              <span className="font-display font-bold text-xl text-white">
+                Daily Tech{" "}
+              </span>
+              <span className="gradient-text font-display font-bold text-xl">
+                News
+              </span>
             </div>
-            <span className="font-display font-bold text-xl hidden sm:block">
-              Daily Tech <span className="gradient-text">News</span>
-            </span>
           </Link>
 
-          <nav className="flex items-center gap-6">
+          {/* Navigation */}
+          <nav className="flex items-center gap-8">
             <Link
               href="#news"
-              className="text-sm text-textMuted hover:text-text transition-colors"
+              className="text-sm text-textMuted hover:text-primary transition-colors underline-animated font-mono"
             >
               News
             </Link>
             <Link
               href="#insights"
-              className="text-sm text-textMuted hover:text-text transition-colors"
+              className="text-sm text-textMuted hover:text-secondary transition-colors underline-animated font-mono"
             >
               Insights
             </Link>
             <Link
               href="#about"
-              className="text-sm text-textMuted hover:text-text transition-colors"
+              className="text-sm text-textMuted hover:text-accent transition-colors underline-animated font-mono"
             >
               About
             </Link>
           </nav>
 
+          {/* Right side */}
           <div className="flex items-center gap-4">
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surfaceHighlight border border-border">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-mono text-textMuted">
+            {/* Live clock - enhanced */}
+            <div className="hidden sm:flex items-center gap-2.5 px-4 py-2 rounded-full glass-dark border border-borderLight">
+              <div className="relative">
+                <div className="w-2 h-2 rounded-full bg-primary pulse-dot" />
+              </div>
+              <span className="text-xs font-mono text-primary tracking-wider">
                 {currentTime.toLocaleTimeString('en-US', { 
                   hour: '2-digit', 
-                  minute: '2-digit' 
+                  minute: '2-digit',
+                  hour12: true
                 })}
               </span>
             </div>
             
+            {/* GitHub button */}
             <a
               href="https://github.com/Xenonesis/Daily-tech-news"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-surfaceHighlight border border-border hover:border-primary/50 transition-all duration-300 group"
+              className="group p-2.5 rounded-xl glass-dark border border-borderLight hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
+              aria-label="GitHub Repository"
             >
               <svg
-                className="w-5 h-5 text-textMuted group-hover:text-text transition-colors"
+                className="w-5 h-5 text-textMuted group-hover:text-primary transition-colors"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

@@ -4,18 +4,30 @@ export default function NewsSkeleton() {
       {[...Array(6)].map((_, index) => (
         <div
           key={index}
-          className="bg-surface rounded-2xl border border-border p-6 animate-pulse"
+          className="bg-surface rounded-2xl border border-border p-6 overflow-hidden"
         >
-          <div className="flex items-center gap-2 mb-4">
-            <div className="h-4 w-20 bg-surfaceHighlight rounded" />
-            <div className="h-4 w-2 bg-surfaceHighlight rounded" />
-            <div className="h-4 w-16 bg-surfaceHighlight rounded" />
+          {/* Category badge skeleton */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="h-7 w-20 skeleton rounded-lg" />
+            <div className="h-4 w-24 skeleton rounded" />
           </div>
-          <div className="h-6 w-full bg-surfaceHighlight rounded mb-2" />
-          <div className="h-6 w-3/4 bg-surfaceHighlight rounded mb-4" />
-          <div className="h-4 w-full bg-surfaceHighlight rounded mb-2" />
-          <div className="h-4 w-full bg-surfaceHighlight rounded mb-2" />
-          <div className="h-4 w-2/3 bg-surfaceHighlight rounded" />
+          
+          {/* Title skeleton */}
+          <div className="h-6 w-full skeleton rounded mb-2" />
+          <div className="h-6 w-3/4 skeleton rounded mb-4" />
+          
+          {/* Summary skeleton */}
+          <div className="space-y-2">
+            <div className="h-4 w-full skeleton rounded" />
+            <div className="h-4 w-full skeleton rounded" />
+            <div className="h-4 w-2/3 skeleton rounded" />
+          </div>
+          
+          {/* Footer skeleton */}
+          <div className="flex items-center justify-between mt-5 pt-4 border-t border-border">
+            <div className="h-4 w-20 skeleton rounded" />
+            <div className="h-3 w-12 skeleton rounded" />
+          </div>
         </div>
       ))}
     </div>
