@@ -118,8 +118,8 @@ function generateDailyNews() {
   return news;
 }
 
-function generateSummary(title: string): string {
-  const summaries: Record<string, string> = {
+function generateSummary(title) {
+  const summaries = {
     'Open-Source Models Breaking Tech Giants\' Hold': 'Post-training phase breakthroughs enable customizable, fine-tuned models. Startups and researchers can now build powerful AI on shared open foundations, democratizing AI development.',
     'Agentic AI with Enhanced Context & Memory': 'Persistent memory enables agents to learn from past actions. Moving beyond single interactions to continuous, autonomous support for complex long-term goals.',
     '71% of Organizations Now Use Generative AI Regularly': 'New statistics show widespread AI adoption, but 80%+ report no measurable enterprise-level EBIT impact. The gap between adoption and value realization remains a challenge.',
@@ -137,42 +137,42 @@ function generateInsights() {
       title: 'AI Adoption Rate',
       description: 'Organizations regularly using generative AI',
       icon: '📊',
-      trend: 'up' as const,
+      trend: 'up',
       value: '71%',
     },
     {
       title: 'Market Growth',
       description: 'Gen AI market CAGR through 2031',
       icon: '🚀',
-      trend: 'up' as const,
+      trend: 'up',
       value: '37.57%',
     },
     {
       title: 'ROI Average',
       description: 'Return per $1 invested in generative AI',
       icon: '💰',
-      trend: 'up' as const,
+      trend: 'up',
       value: '$3.70',
     },
     {
       title: 'Customer Support AI',
       description: 'Support interactions involving agentic AI by mid-2026',
       icon: '🤖',
-      trend: 'up' as const,
+      trend: 'up',
       value: '56%',
     },
     {
       title: 'Enterprise Apps with AI',
       description: 'Applications with task-specific agents by end of 2026',
       icon: '📱',
-      trend: 'up' as const,
+      trend: 'up',
       value: '40%',
     },
     {
       title: 'B2B Spending via AI',
       description: 'Spending intermediated by AI agents by 2028',
       icon: '💼',
-      trend: 'up' as const,
+      trend: 'up',
       value: '$15T',
     },
   ];
